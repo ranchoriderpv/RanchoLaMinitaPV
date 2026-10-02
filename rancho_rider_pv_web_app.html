@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancho La Minita - Horseback Riding Tours / Paseo a Caballo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ranch: {
+                            gold: '#D97706',
+                            goldhover: '#B45309',
+                            dark: '#1C1917',
+                            bark: '#292524',
+                            forest: '#14532D',
+                            river: '#0D9488',
+                            sand: '#FEF3C7',
+                            cream: '#FAFAF9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(28, 25, 23, 0.92) 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-ranch-cream text-stone-800 font-sans antialiased selection:bg-ranch-gold selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-ranch-dark/95 backdrop-blur-md text-stone-200 border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand Name -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <!-- Brand Logo Image -->
+                    <div class="w-12 h-12 rounded-full bg-stone-900 border border-amber-500/40 p-1 flex items-center justify-center overflow-hidden shrink-0 shadow-md group-hover:scale-105 transition-transform">
+                        <img src="e3822b17-b49e-4feb-9396-5710944854d6.JPG" alt="Rancho La Minita Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <span class="block text-lg sm:text-xl font-bold tracking-tight text-white font-serif leading-tight">Rancho La Minita</span>
+                        <span class="block text-xs text-amber-400 font-medium tracking-wide uppercase" data-lang-en="Horseback Riding" data-lang-es="Paseo a Caballo">Horseback Riding</span>
+                    </div>
+                </a>
+
+                <!-- Nav & Language Switcher -->
+                <div class="flex items-center gap-3 sm:gap-6">
+                    <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                        <a href="#tours" class="hover:text-amber-400 transition-colors" data-lang-en="Tours & Rates" data-lang-es="Rutas y Precios">Tours & Rates</a>
+                        <a href="#gallery" class="hover:text-amber-400 transition-colors" data-lang-en="Gallery" data-lang-es="Galería">Gallery</a>
+                        <a href="#meeting" class="hover:text-amber-400 transition-colors" data-lang-en="Meeting Point" data-lang-es="Punto de Encuentro">Meeting Point</a>
+                        <a href="#book" class="hover:text-amber-400 transition-colors" data-lang-en="Book Now" data-lang-es="Reservar">Book Now</a>
+                    </nav>
+
+                    <!-- Language Switcher Button -->
+                    <button id="langToggle" aria-label="Toggle language between English and Spanish" class="flex items-center gap-2 bg-stone-800 hover:bg-stone-700 text-amber-300 border border-stone-700 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-sm">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="langLabel">ES / EN</span>
+                    </button>
+
+                    <!-- CTA Reserve Button -->
+                    <a href="#book" class="hidden sm:inline-flex items-center gap-2 bg-ranch-gold hover:bg-ranch-goldhover text-stone-950 font-bold px-4 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span data-lang-en="Reserve" data-lang-es="Reservar">Reserve</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Trail POV Background Photo -->
+            <img src="960e5b17-990d-4c4b-859d-e093607e9588.JPG" alt="Horseback trail riding across river in Puerto Vallarta" class="w-full h-full object-cover object-center scale-105">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-16 sm:py-24">
+            <!-- Featured Logo Badge -->
+            <div class="w-28 h-28 sm:w-36 sm:h-36 mx-auto mb-6 rounded-full border-2 border-amber-400/60 p-2 bg-stone-950/70 backdrop-blur-md shadow-2xl flex items-center justify-center">
+                <img src="e3822b17-b49e-4feb-9396-5710944854d6.JPG" alt="Rancho La Minita Horseback Riding Logo" class="w-full h-full object-contain rounded-full">
+            </div>
+
+            <span class="inline-block bg-ranch-gold/20 text-amber-300 border border-amber-500/30 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4 backdrop-blur-md">
+                <i class="fa-solid fa-location-dot mr-1.5"></i> Puerto Vallarta, Mexico
+            </span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold font-serif tracking-tight leading-tight text-white mb-2 drop-shadow-lg">
+                Rancho La Minita
+            </h1>
+            <p class="text-xl sm:text-2xl font-serif text-amber-200 mb-6 italic drop-shadow-sm" data-lang-en="Horseback Riding Tours • Paseo a Caballo" data-lang-es="Paseo a Caballo • Horseback Riding Tours">
+                Horseback Riding Tours • Paseo a Caballo
+            </p>
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-stone-200 mb-8 leading-relaxed font-normal drop-shadow" data-lang-en="Ride through pristine jungle rivers, majestic mountain arches, and hidden waterfalls along the scenic Cuale river canyon with Juan & Joey." data-lang-es="Recorre ríos cristalinos en la selva, majestuosos arcos de montaña y cascadas escondidas en el cañón del río Cuale junto a Juan y Joey.">
+                Ride through pristine jungle rivers, majestic mountain arches, and hidden waterfalls along the scenic Cuale river canyon with Juan & Joey.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#book" class="w-full sm:w-auto bg-ranch-gold hover:bg-ranch-goldhover text-stone-950 font-bold px-8 py-4 rounded-xl text-base shadow-xl hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-horse"></i>
+                    <span data-lang-en="Book Your Ride" data-lang-es="Reserva tu Paseo">Book Your Ride</span>
+                </a>
+                <a href="#tours" class="w-full sm:w-auto bg-stone-800/80 hover:bg-stone-800 text-white font-semibold px-8 py-4 rounded-xl text-base border border-stone-600 backdrop-blur-md hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-clock"></i>
+                    <span data-lang-en="View Rates & Options" data-lang-es="Ver Tarifas y Opciones">View Rates & Options</span>
+                </a>
+            </div>
+
+            <!-- Quick WhatsApp Contacts -->
+            <div class="mt-10 pt-6 border-t border-stone-700/60 flex flex-wrap justify-center items-center gap-6 text-sm text-stone-300">
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                    <span><strong>Juan:</strong> <a href="https://wa.me/523223786245" target="_blank" class="hover:underline hover:text-emerald-400">322 378-6245</a></span>
+                </div>
+                <span class="hidden sm:inline text-stone-600">•</span>
+                <div class="flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                    <span><strong>Joey:</strong> <a href="https://wa.me/523221179479" target="_blank" class="hover:underline hover:text-emerald-400">322 117-9479</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours & Pricing Section -->
+    <section id="tours" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold font-serif text-stone-900 mb-3" data-lang-en="Horseback Riding Tours" data-lang-es="Paseos a Caballo">
+                Horseback Riding Tours
+            </h2>
+            <div class="w-20 h-1 bg-ranch-gold mx-auto rounded-full mb-4"></div>
+            <p class="text-stone-600 text-lg" data-lang-en="Choose between our popular 4-hour river trail ride or our full 6-hour jungle waterfall expedition." data-lang-es="Elige entre nuestro popular paseo de 4 horas por el río o la expedición completa de 6 horas a la cascada.">
+                Choose between our popular 4-hour river trail ride or our full 6-hour jungle waterfall expedition.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- 4 Hour Tour Card -->
+            <div class="bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-md card-hover flex flex-col justify-between">
+                <div>
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="c1410577-8522-4eb9-8eb0-b9664470cfa1.JPG" alt="4 Hour Horseback River Ride" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-stone-900/85 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" data-lang-en="Popular Trail" data-lang-es="Ruta Popular">
+                            Popular Trail
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-2xl font-bold font-serif text-stone-900" data-lang-en="4 Hours River Ride" data-lang-es="Paseo de 4 Horas">4 Hours River Ride</h3>
+                            <div class="text-right">
+                                <span class="text-3xl font-extrabold text-ranch-gold">$1,500</span>
+                                <span class="text-xs text-stone-500 block font-medium">MXN p/persona</span>
+                            </div>
+                        </div>
+
+                        <p class="text-stone-600 mb-6 text-sm sm:text-base leading-relaxed" data-lang-en="Enjoy an easy-going trail ride crossing shallow river beds, mountain paths, and scenic arches near Paso Ancho." data-lang-es="Disfruta de un recorrido a caballo cruzando el río, senderos de montaña y hermosos arcos cerca de Paso Ancho.">
+                            Enjoy an easy-going trail ride crossing shallow river beds, mountain paths, and scenic arches near Paso Ancho.
+                        </p>
+
+                        <ul class="space-y-3 text-sm text-stone-700 mb-6">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Duration: 4 Hours" data-lang-es="Duración: 4 Horas">Duration: 4 Hours</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="River crossings & Ejido El Jorullo arch" data-lang-es="Cruces de río y arco del Ejido El Jorullo">River crossings & Ejido El Jorullo arch</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Gentle, friendly horses for all rider levels" data-lang-es="Caballos dóciles para todos los niveles">Gentle, friendly horses for all rider levels</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Guided by experienced local riders" data-lang-es="Guiado por expertos locales">Guided by experienced local riders</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 pt-0">
+                    <button onclick="selectTour('4 Hours - $1,500 MXN')" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3.5 px-4 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                        <span data-lang-en="Select 4 Hour Tour" data-lang-es="Seleccionar Paseo 4 Horas">Select 4 Hour Tour</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6 Hour Tour Card -->
+            <div class="bg-white rounded-3xl overflow-hidden border-2 border-ranch-gold shadow-lg card-hover flex flex-col justify-between relative">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-ranch-gold text-stone-950 text-xs font-black px-4 py-1 rounded-full uppercase tracking-widest shadow-md" data-lang-en="★ Best Expedition ★" data-lang-es="★ La Mejor Expedición ★">
+                    ★ Best Expedition ★
+                </div>
+                <div>
+                    <div class="relative h-60 overflow-hidden">
+                        <img src="3aedd054-6fa0-46fc-895f-9ba17ec15cc3.jpg" alt="6 Hour Waterfall Trail" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 sm:p-8">
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-2xl font-bold font-serif text-stone-900" data-lang-en="6 Hours Waterfall Tour" data-lang-es="Paseo de 6 Horas con Cascada">6 Hours Waterfall Tour</h3>
+                            <div class="text-right">
+                                <span class="text-3xl font-extrabold text-ranch-gold">$2,000</span>
+                                <span class="text-xs text-stone-500 block font-medium">MXN p/persona</span>
+                            </div>
+                        </div>
+
+                        <p class="text-stone-600 mb-6 text-sm sm:text-base leading-relaxed" data-lang-en="Ride deep into the canyon to reach pristine jungle waterfalls, swimming natural pools, and a relaxing palapa stop." data-lang-es="Adéntrate en el cañón hasta encontrar hermosas cascadas, pozas naturales para nadar y descanso bajo la palapa.">
+                            Ride deep into the canyon to reach pristine jungle waterfalls, swimming natural pools, and a relaxing palapa stop.
+                        </p>
+
+                        <ul class="space-y-3 text-sm text-stone-700 mb-6">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Duration: 6 Hours (Full Adventure)" data-lang-es="Duración: 6 Horas (Aventura Completa)">Duration: 6 Hours (Full Adventure)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Swimming stop at natural waterfall pool" data-lang-es="Tiempo para nadar en la poza de la cascada">Swimming stop at natural waterfall pool</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Rest & refreshment stop at palapa" data-lang-es="Descanso y refrescos en la palapa">Rest & refreshment stop at palapa</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                                <span data-lang-en="Deep jungle canyon exploration" data-lang-es="Exploración profunda del cañón">Deep jungle canyon exploration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 pt-0">
+                    <button onclick="selectTour('6 Hours - $2,000 MXN')" class="w-full bg-ranch-gold hover:bg-ranch-goldhover text-stone-950 font-bold py-3.5 px-4 rounded-xl text-center transition-all flex items-center justify-center gap-2 shadow-md">
+                        <span data-lang-en="Select 6 Hour Tour" data-lang-es="Seleccionar Paseo 6 Horas">Select 6 Hour Tour</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Showcase Section -->
+    <!-- 
+        HOW TO UPDATE GALLERY IMAGES LATER:
+        Simply replace the src="..." URLs below with your hosted image links (e.g., imgur, postimages, or github files).
+    -->
+    <section id="gallery" class="py-20 bg-stone-900 text-white px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-ranch-gold uppercase text-xs font-bold tracking-widest block mb-2" data-lang-en="Real Guest Photos" data-lang-es="Fotos Reales del Paseo">Real Guest Photos</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-3" data-lang-en="Rancho La Minita Experience" data-lang-es="La Experiencia en Rancho La Minita">
+                    Rancho La Minita Experience
+                </h2>
+                <div class="w-16 h-1 bg-ranch-gold mx-auto rounded-full mb-4"></div>
+                <p class="text-stone-300 text-sm sm:text-base" data-lang-en="Snapshots from our daily trail rides along the Cuale River, mountain landmarks, and waterfall spots." data-lang-es="Imágenes de nuestros paseos diarios a lo largo del río Cuale, monumentos de montaña y cascadas.">
+                    Snapshots from our daily trail rides along the Cuale River, mountain landmarks, and waterfall spots.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photo 1: Archway -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="78b0973d-3cc3-48a6-80fa-36a5db1b8a17.JPG" alt="Riders under Ejido El Jorullo stone archway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">Ejido El Jorullo</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="Historic Stone Archway" data-lang-es="Arco de Entrada">Historic Stone Archway</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 2: Couple on Horseback -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="c1410577-8522-4eb9-8eb0-b9664470cfa1.JPG" alt="Couple holding hands while riding horses through the river" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">Río Cuale</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="River Trail Ride" data-lang-es="Paseo por el Río">River Trail Ride</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 3: Waterfall Pool -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="3aedd054-6fa0-46fc-895f-9ba17ec15cc3.jpg" alt="Waterfall natural pool in the jungle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">Jungle Waterfall</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="Freshwater Swimming Pool" data-lang-es="Poza Natural y Cascada">Freshwater Swimming Pool</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 4: Palapa Group Selfie -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="92a3988d-aee2-4405-bcdf-2e36eace34c8.JPG" alt="Group enjoying under palapa roof with guide Juan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">Palapa Rest Stop</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="Relaxing with Guide Juan" data-lang-es="Descanso en la Palapa con Juan">Relaxing with Guide Juan</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 5: Group Selfie Crossing River -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="b2283dd1-9ad1-47c3-86c3-c7df956e1ef9.JPG" alt="Group selfie on horseback crossing the river" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">River Fun</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="Scenic Group Crossings" data-lang-es="Cruzando el Río en Grupo">Scenic Group Crossings</h4>
+                    </div>
+                </div>
+
+                <!-- Photo 6: Romantic Couple Kiss on Horseback -->
+                <div class="group relative h-80 rounded-2xl overflow-hidden shadow-xl border border-stone-800">
+                    <img src="4dca2d7b-0fc8-47b7-bc55-c8e298e96499.JPG" alt="Couple riding horses across the Cuale river" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <span class="text-xs text-amber-400 font-semibold uppercase tracking-wider block">Special Moments</span>
+                        <h4 class="font-serif font-bold text-lg text-white" data-lang-en="Memories on the River" data-lang-es="Momentos Inolvidables">Memories on the River</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="book" class="py-20 bg-stone-950 text-white relative border-t border-stone-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="text-ranch-gold uppercase text-xs font-bold tracking-widest block mb-2" data-lang-en="Easy Direct Reservation" data-lang-es="Reserva Directa y Fácil">Easy Direct Reservation</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif mb-4" data-lang-en="Reserve Your Horseback Tour" data-lang-es="Reserva Tu Paseo a Caballo">
+                    Reserve Your Horseback Tour
+                </h2>
+                <p class="text-stone-300 max-w-xl mx-auto text-sm sm:text-base" data-lang-en="Select your details below to instantly start a reservation chat on WhatsApp with Juan or Joey." data-lang-es="Completa la información a continuación para iniciar tu reserva por WhatsApp con Juan o Joey.">
+                    Select your details below to instantly start a reservation chat on WhatsApp with Juan or Joey.
+                </p>
+            </div>
+
+            <div class="bg-stone-900 rounded-3xl p-6 sm:p-10 border border-stone-800 shadow-2xl">
+                <form id="bookingForm" onsubmit="event.preventDefault();" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Guest Name -->
+                        <div>
+                            <label for="guestName" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Your Full Name *" data-lang-es="Nombre Completo *">Your Full Name *</label>
+                            <input type="text" id="guestName" required placeholder="e.g. Maria Smith" class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-ranch-gold">
+                        </div>
+
+                        <!-- Tour Date -->
+                        <div>
+                            <label for="tourDate" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Preferred Date *" data-lang-es="Fecha Preferida *">Preferred Date *</label>
+                            <input type="date" id="tourDate" required class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-ranch-gold">
+                        </div>
+
+                        <!-- Tour Option -->
+                        <div>
+                            <label for="tourSelect" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Select Tour *" data-lang-es="Seleccionar Paseo *">Select Tour *</label>
+                            <select id="tourSelect" class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-ranch-gold">
+                                <option value="4 Hours - $1,500 MXN">4 Hours River Ride ($1,500 MXN / person)</option>
+                                <option value="6 Hours - $2,000 MXN">6 Hours Waterfall Ride ($2,000 MXN / person)</option>
+                            </select>
+                        </div>
+
+                        <!-- Riders Count -->
+                        <div>
+                            <label for="guestCount" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Number of Riders *" data-lang-es="Número de Personas *">Number of Riders *</label>
+                            <select id="guestCount" class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-ranch-gold">
+                                <option value="1 Person">1 Person</option>
+                                <option value="2 People">2 People</option>
+                                <option value="3 People">3 People</option>
+                                <option value="4 People">4 People</option>
+                                <option value="5+ People">5+ People (Group)</option>
+                            </select>
+                        </div>
+
+                        <!-- Contact Guide Selection -->
+                        <div>
+                            <label for="guideSelect" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Contact Guide *" data-lang-es="Guía de Contacto *">Contact Guide *</label>
+                            <select id="guideSelect" class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-ranch-gold">
+                                <option value="Juan">Juan (322 378-6245)</option>
+                                <option value="Joey">Joey (322 117-9479)</option>
+                            </select>
+                        </div>
+
+                        <!-- Notes -->
+                        <div>
+                            <label for="specialNotes" class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-2" data-lang-en="Special Requests / Time Preference" data-lang-es="Notas / Horario Preferido">Special Requests / Time Preference</label>
+                            <input type="text" id="specialNotes" placeholder="e.g. Beginners, morning ride" class="w-full bg-stone-950 border border-stone-700 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-ranch-gold">
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <button onclick="sendWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg hover:scale-[1.02]">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span data-lang-en="Send via WhatsApp" data-lang-es="Enviar por WhatsApp">Send via WhatsApp</span>
+                        </button>
+
+                        <button onclick="sendEmail()" class="flex-1 bg-stone-800 hover:bg-stone-700 text-white font-bold py-4 px-6 rounded-xl transition-all flex items-center justify-center gap-3 border border-stone-700 hover:scale-[1.02]">
+                            <i class="fa-regular fa-envelope text-xl"></i>
+                            <span data-lang-en="Send via Email" data-lang-es="Enviar por Correo">Send via Email</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Point Section -->
+    <section id="meeting" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-ranch-gold uppercase text-xs font-bold tracking-widest block mb-2" data-lang-en="Departure Location" data-lang-es="Punto de Salida">Departure Location</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-serif text-stone-900 mb-6" data-lang-en="Meet Us at Ranchito La Minita" data-lang-es="Encuéntranos en Ranchito La Minita">
+                    Meet Us at <br><span class="text-ranch-gold">Ranchito La Minita (Col. Paso Ancho)</span>
+                </h2>
+                
+                <p class="text-stone-600 mb-6 leading-relaxed" data-lang-en="All tours depart directly from Ranchito La Minita in Colonia Paso Ancho, Puerto Vallarta. Departure times will be confirmed upon reservation." data-lang-es="Todos nuestros paseos salen directamente desde Ranchito La Minita en Colonia Paso Ancho, Puerto Vallarta. Confirmaremos la hora exacta al reservar.">
+                    All tours depart directly from Ranchito La Minita in Colonia Paso Ancho, Puerto Vallarta. Departure times will be confirmed upon reservation.
+                </p>
+
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-4 p-4 bg-amber-50 rounded-2xl border border-amber-200">
+                        <div class="w-10 h-10 rounded-xl bg-amber-200/60 text-ranch-gold flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-map-pin text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900 text-sm" data-lang-en="Location Name" data-lang-es="Ubicación">Location Name</h4>
+                            <p class="text-stone-600 text-sm">Ranchito La Minita - Col. Paso Ancho, Puerto Vallarta, Jalisco</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 bg-emerald-50 rounded-2xl border border-emerald-200">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-200/60 text-emerald-800 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-person-hiking text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-stone-900 text-sm" data-lang-en="Recommended Clothing" data-lang-es="Ropa Recomendada">Recommended Clothing</h4>
+                            <p class="text-stone-600 text-sm" data-lang-en="Long pants, boots or sturdy shoes, sunscreen, water, and swimwear for the waterfall tour!" data-lang-es="Pantalón largo, tenis o botas, bloqueador solar, agua y traje de baño para el paseo de cascada.">Long pants, boots or sturdy shoes, sunscreen, water, and swimwear for the waterfall tour!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Link to Place ID -->
+                <a href="https://maps.google.com/?cid=8577742119951967669&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all shadow-md">
+                    <i class="fa-solid fa-diamond-turn-right text-amber-400"></i>
+                    <span data-lang-en="Open Map Directions" data-lang-es="Abrir Indicaciones en Mapa">Open Map Directions</span>
+                </a>
+            </div>
+
+            <!-- Ride Access Info -->
+            <div class="bg-stone-900 text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden shadow-2xl border border-stone-800">
+                <div class="absolute inset-0 opacity-20">
+                    <img src="36fa3501-6c01-4eda-af99-f9550de1b868.JPG" alt="Scenic river trail background" class="w-full h-full object-cover">
+                </div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 text-ranch-gold text-sm font-bold uppercase tracking-wider mb-2">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Puerto Vallarta, Jalisco</span>
+                    </div>
+                    <h3 class="text-2xl font-bold font-serif mb-4" data-lang-en="15 Minutes from Romantic Zone" data-lang-es="A 15 Minutos de la Zona Romántica">
+                        15 Minutes from Romantic Zone
+                    </h3>
+                    <p class="text-stone-300 text-sm mb-6 leading-relaxed" data-lang-en="Colonia Paso Ancho is easily accessible by Taxi, Uber, or local bus up from downtown Vallarta." data-lang-es="Colonia Paso Ancho es de muy fácil acceso tomando taxi, Uber o camión local desde el centro de Puerto Vallarta.">
+                        Colonia Paso Ancho is easily accessible by Taxi, Uber, or local bus up from downtown Vallarta.
+                    </p>
+
+                    <div class="bg-stone-800/80 backdrop-blur-md rounded-2xl p-4 border border-stone-700/80 space-y-3">
+                        <div class="flex items-center justify-between text-xs sm:text-sm">
+                            <span class="text-stone-400" data-lang-en="Travel Time:" data-lang-es="Tiempo de Viaje:">Travel Time:</span>
+                            <span class="font-bold text-amber-300">~15 Mins from Downtown</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm">
+                            <span class="text-stone-400" data-lang-en="Transport Options:" data-lang-es="Opciones de Transporte:">Transport Options:</span>
+                            <span class="font-bold text-amber-300">Taxi / Uber / City Bus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-ranch-dark text-stone-300 py-16 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-stone-900 border border-amber-500/40 p-0.5 flex items-center justify-center shrink-0">
+                            <img src="e3822b17-b49e-4feb-9396-5710944854d6.JPG" alt="Rancho La Minita Logo" class="w-full h-full object-contain rounded-full">
+                        </div>
+                        <div>
+                            <span class="block text-xl font-bold text-white font-serif">Rancho La Minita</span>
+                            <span class="block text-xs text-amber-400 font-medium tracking-wide uppercase" data-lang-en="Horseback Riding" data-lang-es="Paseo a Caballo">Horseback Riding</span>
+                        </div>
+                    </a>
+                    <p class="text-stone-400 text-sm leading-relaxed mb-6" data-lang-en="Authentic horseback riding tours in Puerto Vallarta. Ride through rivers, mountain arches, and jungle waterfalls." data-lang-es="Paseos a caballo auténticos en Puerto Vallarta. Disfruta de ríos, arcos de montaña y cascadas.">
+                        Authentic horseback riding tours in Puerto Vallarta. Ride through rivers, mountain arches, and jungle waterfalls.
+                    </p>
+                    
+                    <!-- Social Links -->
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.instagram.com/RanchoRiderPV" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:to-purple-600 text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/RanchoRiderPV" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-stone-800 hover:bg-blue-600 text-white flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
+                        <span class="text-xs text-stone-400 font-mono">@RanchoRiderPV</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-serif text-lg" data-lang-en="Direct Contacts" data-lang-es="Contactos Directos">Direct Contacts</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <a href="https://wa.me/523223786245" target="_blank" class="flex items-center gap-3 hover:text-emerald-400 transition-colors">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-semibold text-white">Juan</span>
+                                    <span class="text-xs text-stone-400">322 378-6245</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/523221179479" target="_blank" class="flex items-center gap-3 hover:text-emerald-400 transition-colors">
+                                <div class="w-8 h-8 rounded-lg bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-semibold text-white">Joey</span>
+                                    <span class="text-xs text-stone-400">322 117-9479</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:RanchoRiderPV@gmail.com" class="flex items-center gap-3 hover:text-amber-400 transition-colors">
+                                <div class="w-8 h-8 rounded-lg bg-stone-800 border border-stone-700 flex items-center justify-center text-amber-400 shrink-0">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block font-semibold text-white">Email</span>
+                                    <span class="text-xs text-stone-400">RanchoRiderPV@gmail.com</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-serif text-lg" data-lang-en="Meeting Location" data-lang-es="Punto de Encuentro">Meeting Location</h4>
+                    <p class="text-stone-400 text-sm mb-3">
+                        <strong class="text-stone-200">Ranchito La Minita</strong><br>
+                        Col. Paso Ancho, Puerto Vallarta, Jal.
+                    </p>
+                    <p class="text-xs text-stone-500 leading-relaxed" data-lang-en="Please book in advance so horses can be prepared for your departure time." data-lang-es="Reserva con anticipación para tener listos los caballos a tu llegada.">
+                        Please book in advance so horses can be prepared for your departure time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 text-center text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; <span id="currentYear"></span> Rancho La Minita - Horseback Riding. All rights reserved.</p>
+                <p>Puerto Vallarta, Jalisco</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button for WhatsApp -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+        <a href="https://wa.me/523223786245" target="_blank" aria-label="Chat on WhatsApp with Juan" class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 group">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out font-medium text-sm pl-0 group-hover:pl-2">
+                Chat on WhatsApp
+            </span>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Default to today's date for booking
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('tourDate').value = today;
+
+        function selectTour(tourName) {
+            const selectEl = document.getElementById('tourSelect');
+            selectEl.value = tourName;
+            document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sendWhatsApp() {
+            const name = document.getElementById('guestName').value.trim() || 'Guest';
+            const date = document.getElementById('tourDate').value;
+            const tour = document.getElementById('tourSelect').value;
+            const guests = document.getElementById('guestCount').value;
+            const guide = document.getElementById('guideSelect').value;
+            const notes = document.getElementById('specialNotes').value.trim();
+
+            const phone = guide === 'Joey' ? '523221179479' : '523223786245';
+
+            let msg = `Hola ${guide}! I'd like to book a horseback tour with Rancho La Minita:\n\n`;
+            msg += `👤 *Name:* ${name}\n`;
+            msg += `📅 *Date:* ${date}\n`;
+            msg += `🐴 *Tour:* ${tour}\n`;
+            msg += `👥 *Riders:* ${guests}\n`;
+            if (notes) {
+                msg += `📝 *Notes:* ${notes}\n`;
+            }
+            msg += `\nPlease let me know if this date/time is available!`;
+
+            const encodedMsg = encodeURIComponent(msg);
+            window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+        }
+
+        function sendEmail() {
+            const name = document.getElementById('guestName').value.trim() || 'Guest';
+            const date = document.getElementById('tourDate').value;
+            const tour = document.getElementById('tourSelect').value;
+            const guests = document.getElementById('guestCount').value;
+            const guide = document.getElementById('guideSelect').value;
+            const notes = document.getElementById('specialNotes').value.trim();
+
+            const subject = `Horseback Tour Reservation Request - ${name}`;
+            let body = `Hello Rancho La Minita Team,\n\nI would like to request a horseback tour reservation:\n\n`;
+            body += `Name: ${name}\n`;
+            body += `Date: ${date}\n`;
+            body += `Tour: ${tour}\n`;
+            body += `Number of Riders: ${guests}\n`;
+            body += `Preferred Guide Contact: ${guide}\n`;
+            if (notes) {
+                body += `Special Notes: ${notes}\n`;
+            }
+            body += `\nPlease confirm availability for our tour.\n\nThank you!`;
+
+            const mailtoUrl = `mailto:RanchoRiderPV@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+        }
+
+        // Language Switcher Logic
+        let currentLang = 'en';
+        const langToggleBtn = document.getElementById('langToggle');
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            document.getElementById('langLabel').textContent = currentLang === 'en' ? 'ES / EN' : 'EN / ES';
+
+            document.querySelectorAll('[data-lang-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-lang-${currentLang}`);
+            });
+        });
+    </script>
+</body>
+</html>
